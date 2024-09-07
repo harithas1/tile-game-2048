@@ -1,0 +1,149 @@
+*,
+*::after,
+*::before{
+    box-sizing: border-box;
+    /* margin: 0; */
+}
+
+
+body{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #fff;
+    padding: 10px;
+    font-size: 7.5vmin;
+    flex-direction: column;
+    background-color: lightgray;
+    overflow: hidden;
+}
+
+
+h1 {
+    background-color: rgb(173, 129, 189);
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    font-size: 3rem;
+    padding: 10px;
+    margin-top: 5px;
+    box-shadow: 2px 2px 6px 3px whitesmoke inset;
+    color: azure;
+}
+
+h3 {
+    font-size: 30px;
+    margin-top: -10px;
+}
+
+
+#container{
+    /* margin-top: 2vmin; */
+    margin-bottom: 2vmin;
+    --cell-size: 16vmin;
+    --cell-gap: 2vmin;
+    display: grid;
+    /* --grid-size: 4;  */
+    grid-template-columns: repeat(var(--grid-size), var(--cell-size));
+    grid-template-rows: repeat(var(--grid-size), var(--cell-size));
+    gap: var(--cell-gap);
+    padding: var(--cell-gap);
+    background-color: aqua;
+    border-radius: 1vmin;
+    position: relative;
+}
+
+.cell{
+    background-color: bisque;
+    border-radius: 1vmin;
+}
+
+.tile {
+
+    /* --x: 0;
+    --y: 1; */
+    position: absolute;
+    background-color: red;
+    top: calc(var(--y)* (var(--cell-size) + var(--cell-gap)) + var(--cell-gap));
+    left: calc(var(--x)* (var(--cell-size) + var(--cell-gap)) + var(--cell-gap));
+    height: var(--cell-size);
+    width: var(--cell-size);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 1vmin;
+    font-weight: bold;
+    font-size: 10vmin;
+    color: aliceblue;
+    transform: translate(var(--x)*100%,var(--y)*100%);
+    transition: 0.5s ease-in-out;
+    animation: show 1s ease-in-out;
+}
+
+
+@keyframes show {
+    0%{
+        opacity: .5;
+        transform: scale(0);
+    }
+}
+
+#t2{
+    background-color: hsla(350,100%, 95%);
+    color: hsl(0, 0%, 45%);
+}
+
+#t4{
+    background-color: hsla(350,100%, 90%);
+    color: hsl(0, 0%, 50%);
+}
+
+#t8{
+    background-color: hsla(350,100%, 85%);
+    color: hsl(0, 0%, 55%);
+}
+
+
+
+#t16{
+    background-color: hsla(350,100%, 80%);
+    color: hsl(0, 0%, 60%);
+}
+
+
+#t32{
+    background-color: hsla(350,100%, 75%);
+    color: hsl(0, 10%, 85%);
+}
+
+
+
+#t64{
+    background-color: hsla(350,100%, 70%);
+    color: hsl(0, 10%, 80%);
+}
+
+#t128{
+    background-color: hsla(350,100%, 65%);
+    color: hsl(0, 10%, 80%);
+}
+
+#t256{
+    background-color: hsla(350,100%, 60%);
+    color: hsl(0, 10%, 90%);
+}
+
+
+#t512{
+    background-color: hsl(317, 87%, 28%);
+}
+
+
+#t1024{
+    background-color: hsl(51, 90%, 23%);
+}
+
+#t2048{
+    background-color: hsl(3, 93%, 16%);
+}
